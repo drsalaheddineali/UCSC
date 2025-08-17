@@ -9,15 +9,17 @@ autoScale on
 smoothingWindow 2
 windowingFunction maximum
 filterComposite on
-dimensions dimX=drug dimY=subtype dimA=cell
-sortOrder subtype=+ drug=+ cell=+
-dragAndDrop subTracks
 
-# Subgroup definitions
+# --- subGroups MUST come before dimensions ---
 subGroup1 subtype Subtype ABC=ABC GCB=GCB
 subGroup2 drug    Drug    DMSO=DMSO MEZ=MEZ POM=POM
 subGroup3 cell    Cell    TMD8=TMD8 HBL1=HBL1 LY1=LY1 DHL5=DHL5 DHL6=DHL6
 
+# EXACTLY three dimensions; keys must match subGroup* IDs above
+dimensions dimX=drug dimY=subtype dimA=cell
+
+sortOrder subtype=+ drug=+ cell=+
+dragAndDrop subTracks
 
 ########################################
 #               TMD8 (ABC)
