@@ -1,26 +1,26 @@
 track IKZF3_composite
+compositeTrack on
+type bigWig
 shortLabel IKZF3 comp
 longLabel IKZF3 BigWigs grouped by Subtype and Drug (with Cell filters)
-compositeTrack on
 visibility full
 maxHeightPixels 64:64:16
+autoScale on
 smoothingWindow 2
 windowingFunction maximum
 filterComposite on
-
-# EXACTLY three dimensions (X, Y, A). Do not add dimB.
 dimensions dimX=drug dimY=subtype dimA=cell
 sortOrder subtype=+ drug=+ cell=+
 dragAndDrop subTracks
 
-# Subgroup definitions (must be above any subTracks)
+# Subgroup definitions
 subGroup1 subtype Subtype ABC=ABC GCB=GCB
 subGroup2 drug    Drug    DMSO=DMSO MEZ=MEZ POM=POM
 subGroup3 cell    Cell    TMD8=TMD8 HBL1=HBL1 LY1=LY1 DHL5=DHL5 DHL6=DHL6
 
-# ------------------------ SUBTRACKS ------------------------
-
-# TMD8 (ABC)
+########################################
+#               TMD8 (ABC)
+########################################
 track TMD8_IKZF3_DMSO_24_REP1
 parent IKZF3_composite
 type bigWig
@@ -45,7 +45,9 @@ longLabel TMD8 IKZF3 POM 24h REP1
 bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135697808e969bb89d5/display?to_ext=bigwig
 subGroups subtype=ABC drug=POM cell=TMD8
 
-# HBL1 (ABC)
+########################################
+#               HBL1 (ABC)
+########################################
 track HBL1_IKZF3_DMSO_24_REP1
 parent IKZF3_composite
 type bigWig
@@ -70,7 +72,9 @@ longLabel HBL1 IKZF3 POM 24h REP1
 bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213545daf9b64f09ffc9/display?to_ext=bigwig
 subGroups subtype=ABC drug=POM cell=HBL1
 
-# LY1 (GCB)
+########################################
+#               LY1 (GCB)
+########################################
 track LY1_IKZF3_DMSO_24_REP1
 parent IKZF3_composite
 type bigWig
@@ -103,7 +107,9 @@ longLabel LY1 IKZF3 POM 24h REP1
 bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352b39fff6bba05eda/display?to_ext=bigwig
 subGroups subtype=GCB drug=POM cell=LY1
 
-# DHL5 (GCB)
+########################################
+#               DHL5 (GCB)
+########################################
 track DHL5_IKZF3_DMSO_24_REP1
 parent IKZF3_composite
 type bigWig
@@ -128,7 +134,9 @@ longLabel DHL5 IKZF3 POM 24h REP1
 bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b2660826a4ec8188/display?to_ext=bigwig
 subGroups subtype=GCB drug=POM cell=DHL5
 
-# DHL6 (GCB)
+########################################
+#               DHL6 (GCB)
+########################################
 track DHL6_IKZF3_DMSO_24_REP1
 parent IKZF3_composite
 type bigWig
