@@ -1,0 +1,5 @@
+hub LymphIKZF3
+shortLabel IKZF3 MEZ/POM (ABC vs GCB)
+longLabel IKZF3 24h perturbation BigWigs for ABC vs GCB across DMSO/MEZ/POM
+genomesFile genomes.txt
+email salaheddine.ali@charite.de
