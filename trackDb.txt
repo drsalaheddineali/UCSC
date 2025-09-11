@@ -170,7 +170,7 @@ shortLabel RIVA MEZ 4h R2
 longLabel RIVA IKZF3 MEZ 4h REP2
 bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ff2de6312d6b9aa5/display?to_ext=bigwig
 subGroups subtype=ABC drug=MEZ cell=RIVA rep=R2 time=4h
-color 0,100,100
+color 0,128,128
 
 track RIVA_IKZF3_POM_4_REP1
 parent IKZF3_composite on
@@ -283,7 +283,7 @@ shortLabel LY1 DMSO 24h R2
 longLabel LY1 IKZF3 DMSO 24h REP2
 bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135a7a438d09458846b/display?to_ext=bigwig
 subGroups subtype=GCB drug=DMSO cell=LY1 rep=R2 time=24h
-color 120,120,120
+color 160,160,160
 
 track LY1_IKZF3_MEZ_24_REP1
 parent IKZF3_composite on
