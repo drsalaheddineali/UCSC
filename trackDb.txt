@@ -2,144 +2,207 @@ track IKZF3_composite
 compositeTrack on
 type bigWig
 shortLabel IKZF3 comp
-longLabel IKZF3 BigWigs grouped by Subtype and Drug (with Cell filters)
+longLabel IKZF3 BigWigs grouped by Subtype, Drug, Time & Cell (with Rep filters)
 visibility full
 maxHeightPixels 64:64:16
 autoScale on
 smoothingWindow 2
 windowingFunction maximum
 filterComposite on
-dimensions dimX=drug dimY=subtype dimA=cell
-sortOrder subtype=+ drug=+ cell=+
+dimensions dimX=drug dimY=subtype dimA=cell dimB=time
+sortOrder subtype=+ drug=+ cell=+ time=+ rep=+
 dragAndDrop subTracks
+gridDefault on
+yLineMark 0
+yLineOnOff on
+priority 30
+
+# Subgroups
 subGroup1 subtype Subtype ABC=ABC GCB=GCB
 subGroup2 drug    Drug    DMSO=DMSO MEZ=MEZ POM=POM
-subGroup3 cell    Cell    TMD8=TMD8 HBL1=HBL1 LY1=LY1 DHL5=DHL5 DHL6=DHL6
+subGroup3 cell    Cell    TMD8=TMD8 HBL1=HBL1 LY1=LY1 DHL5=DHL5 DHL6=DHL6 RIVA=RIVA
+subGroup4 rep     Replicate R1=R1 R2=R2
+subGroup5 time    Time    4h=4h 24h=24h
 
-track TMD8_IKZF3_DMSO_24_REP1
+################################################################################
+# --- DHL5 4h ------------------------------------------------------------------
+track DHL5_IKZF3_DMSO_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel TMD8 DMSO R1
-longLabel TMD8 IKZF3 DMSO 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352551c61bf496a7f0/display?to_ext=bigwig
-subGroups subtype=ABC drug=DMSO cell=TMD8
+shortLabel DHL5 DMSO 4h R1
+longLabel DHL5 IKZF3 DMSO 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213509a6594a90f879bd/display?to_ext=bigwig
+subGroups subtype=GCB drug=DMSO cell=DHL5 rep=R1 time=4h
+color 160,160,160
 
-track TMD8_IKZF3_MEZ_24_REP1
+track DHL5_IKZF3_MEZ_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel TMD8 MEZ R1
-longLabel TMD8 IKZF3 MEZ 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213530d4cce28a504ef8/display?to_ext=bigwig
-subGroups subtype=ABC drug=MEZ cell=TMD8
+shortLabel DHL5 MEZ 4h R1
+longLabel DHL5 IKZF3 MEZ 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213548270b36bdd10348/display?to_ext=bigwig
+subGroups subtype=GCB drug=MEZ cell=DHL5 rep=R1 time=4h
+color 0,128,128
 
-track TMD8_IKZF3_POM_24_REP1
+track DHL5_IKZF3_POM_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel TMD8 POM R1
-longLabel TMD8 IKZF3 POM 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135697808e969bb89d5/display?to_ext=bigwig
-subGroups subtype=ABC drug=POM cell=TMD8
+shortLabel DHL5 POM 4h R1
+longLabel DHL5 IKZF3 POM 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135a6ab2fe1883e4f74/display?to_ext=bigwig
+subGroups subtype=GCB drug=POM cell=DHL5 rep=R1 time=4h
+color 180,0,140
 
-track HBL1_IKZF3_DMSO_24_REP1
+################################################################################
+# --- DHL6 4h ------------------------------------------------------------------
+track DHL6_IKZF3_DMSO_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel HBL1 DMSO R1
-longLabel HBL1 IKZF3 DMSO 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721353a81a64449cfe2f1/display?to_ext=bigwig
-subGroups subtype=ABC drug=DMSO cell=HBL1
+shortLabel DHL6 DMSO 4h R1
+longLabel DHL6 IKZF3 DMSO 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135784904a41e9602f3/display?to_ext=bigwig
+subGroups subtype=GCB drug=DMSO cell=DHL6 rep=R1 time=4h
+color 160,160,160
 
-track HBL1_IKZF3_MEZ_24_REP1
+track DHL6_IKZF3_MEZ_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel HBL1 MEZ R1
-longLabel HBL1 IKZF3 MEZ 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135fe37e88a72ce582e/display?to_ext=bigwig
-subGroups subtype=ABC drug=MEZ cell=HBL1
+shortLabel DHL6 MEZ 4h R1
+longLabel DHL6 IKZF3 MEZ 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135cc1ca37a1e2cc986/display?to_ext=bigwig
+subGroups subtype=GCB drug=MEZ cell=DHL6 rep=R1 time=4h
+color 0,128,128
 
-track HBL1_IKZF3_POM_24_REP1
+track DHL6_IKZF3_POM_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel HBL1 POM R1
-longLabel HBL1 IKZF3 POM 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213545daf9b64f09ffc9/display?to_ext=bigwig
-subGroups subtype=ABC drug=POM cell=HBL1
+shortLabel DHL6 POM 4h R1
+longLabel DHL6 IKZF3 POM 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b5644528a63d6c50/display?to_ext=bigwig
+subGroups subtype=GCB drug=POM cell=DHL6 rep=R1 time=4h
+color 180,0,140
 
-track LY1_IKZF3_DMSO_24_REP1
+################################################################################
+# --- HBL1 4h ------------------------------------------------------------------
+track HBL1_IKZF3_DMSO_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel LY1 DMSO R1
-longLabel LY1 IKZF3 DMSO 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135efe1e803dd28c56c/display?to_ext=bigwig
-subGroups subtype=GCB drug=DMSO cell=LY1
+shortLabel HBL1 DMSO 4h R1
+longLabel HBL1 IKZF3 DMSO 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721351148be78ad49f363/display?to_ext=bigwig
+subGroups subtype=ABC drug=DMSO cell=HBL1 rep=R1 time=4h
+color 160,160,160
 
-track LY1_IKZF3_DMSO_24_REP2
+track HBL1_IKZF3_MEZ_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel LY1 DMSO R2
-longLabel LY1 IKZF3 DMSO 24h REP2
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135a7a438d09458846b/display?to_ext=bigwig
-subGroups subtype=GCB drug=DMSO cell=LY1
+shortLabel HBL1 MEZ 4h R1
+longLabel HBL1 IKZF3 MEZ 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213515aeabf9aa8e5886/display?to_ext=bigwig
+subGroups subtype=ABC drug=MEZ cell=HBL1 rep=R1 time=4h
+color 0,128,128
 
-track LY1_IKZF3_MEZ_24_REP1
+track HBL1_IKZF3_POM_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel LY1 MEZ R1
-longLabel LY1 IKZF3 MEZ 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135893a448683da5be5/display?to_ext=bigwig
-subGroups subtype=GCB drug=MEZ cell=LY1
+shortLabel HBL1 POM 4h R1
+longLabel HBL1 IKZF3 POM 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135f5fc0138aae2f379/display?to_ext=bigwig
+subGroups subtype=ABC drug=POM cell=HBL1 rep=R1 time=4h
+color 180,0,140
 
-track LY1_IKZF3_POM_24_REP1
+################################################################################
+# --- LY1 4h -------------------------------------------------------------------
+track LY1_IKZF3_DMSO_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel LY1 POM R1
-longLabel LY1 IKZF3 POM 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352b39fff6bba05eda/display?to_ext=bigwig
-subGroups subtype=GCB drug=POM cell=LY1
+shortLabel LY1 DMSO 4h R1
+longLabel LY1 IKZF3 DMSO 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213554e2a5bb361a5756/display?to_ext=bigwig
+subGroups subtype=GCB drug=DMSO cell=LY1 rep=R1 time=4h
+color 160,160,160
 
-track DHL5_IKZF3_DMSO_24_REP1
+track LY1_IKZF3_MEZ_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel DHL5 DMSO R1
-longLabel DHL5 IKZF3 DMSO 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135380c29bdcf65e8d2/display?to_ext=bigwig
-subGroups subtype=GCB drug=DMSO cell=DHL5
+shortLabel LY1 MEZ 4h R1
+longLabel LY1 IKZF3 MEZ 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352138178b874495d0/display?to_ext=bigwig
+subGroups subtype=GCB drug=MEZ cell=LY1 rep=R1 time=4h
+color 0,128,128
 
-track DHL5_IKZF3_MEZ_24_REP1
+track LY1_IKZF3_POM_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel DHL5 MEZ R1
-longLabel DHL5 IKZF3 MEZ 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135170a5f5baf13ae7c/display?to_ext=bigwig
-subGroups subtype=GCB drug=MEZ cell=DHL5
+shortLabel LY1 POM 4h R1
+longLabel LY1 IKZF3 POM 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213579bc41be199d6f12/display?to_ext=bigwig
+subGroups subtype=GCB drug=POM cell=LY1 rep=R1 time=4h
+color 180,0,140
 
-track DHL5_IKZF3_POM_24_REP1
+################################################################################
+# --- RIVA 4h ------------------------------------------------------------------
+track RIVA_IKZF3_DMSO_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel DHL5 POM R1
-longLabel DHL5 IKZF3 POM 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b2660826a4ec8188/display?to_ext=bigwig
-subGroups subtype=GCB drug=POM cell=DHL5
+shortLabel RIVA DMSO 4h R1
+longLabel RIVA IKZF3 DMSO 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135cdbc957c55c48404/display?to_ext=bigwig
+subGroups subtype=ABC drug=DMSO cell=RIVA rep=R1 time=4h
+color 160,160,160
 
-track DHL6_IKZF3_DMSO_24_REP1
+track RIVA_IKZF3_MEZ_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel DHL6 DMSO R1
-longLabel DHL6 IKZF3 DMSO 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135afcea9f0986437a1/display?to_ext=bigwig
-subGroups subtype=GCB drug=DMSO cell=DHL6
+shortLabel RIVA MEZ 4h R1
+longLabel RIVA IKZF3 MEZ 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213514b2fee122998f72/display?to_ext=bigwig
+subGroups subtype=ABC drug=MEZ cell=RIVA rep=R1 time=4h
+color 0,128,128
 
-track DHL6_IKZF3_MEZ_24_REP1
+track RIVA_IKZF3_MEZ_4_REP2
 parent IKZF3_composite on
 type bigWig
-shortLabel DHL6 MEZ R1
-longLabel DHL6 IKZF3 MEZ 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135d57b93cdcd278390/display?to_ext=bigwig
-subGroups subtype=GCB drug=MEZ cell=DHL6
+shortLabel RIVA MEZ 4h R2
+longLabel RIVA IKZF3 MEZ 4h REP2
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ff2de6312d6b9aa5/display?to_ext=bigwig
+subGroups subtype=ABC drug=MEZ cell=RIVA rep=R2 time=4h
+color 0,100,100
 
-track DHL6_IKZF3_POM_24_REP1
+track RIVA_IKZF3_POM_4_REP1
 parent IKZF3_composite on
 type bigWig
-shortLabel DHL6 POM R1
-longLabel DHL6 IKZF3 POM 24h REP1
-bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135d7620a2e49708df3/display?to_ext=bigwig
-subGroups subtype=GCB drug=POM cell=DHL6
+shortLabel RIVA POM 4h R1
+longLabel RIVA IKZF3 POM 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352a07d36692a1cc49/display?to_ext=bigwig
+subGroups subtype=ABC drug=POM cell=RIVA rep=R1 time=4h
+color 180,0,140
+
+################################################################################
+# --- TMD8 4h ------------------------------------------------------------------
+track TMD8_IKZF3_DMSO_4_REP1
+parent IKZF3_composite on
+type bigWig
+shortLabel TMD8 DMSO 4h R1
+longLabel TMD8 IKZF3 DMSO 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135e6817d50d52b7e48/display?to_ext=bigwig
+subGroups subtype=ABC drug=DMSO cell=TMD8 rep=R1 time=4h
+color 160,160,160
+
+track TMD8_IKZF3_MEZ_4_REP1
+parent IKZF3_composite on
+type bigWig
+shortLabel TMD8 MEZ 4h R1
+longLabel TMD8 IKZF3 MEZ 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213551eb420df27d9dd8/display?to_ext=bigwig
+subGroups subtype=ABC drug=MEZ cell=TMD8 rep=R1 time=4h
+color 0,128,128
+
+track TMD8_IKZF3_POM_4_REP1
+parent IKZF3_composite on
+type bigWig
+shortLabel TMD8 POM 4h R1
+longLabel TMD8 IKZF3 POM 4h REP1
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721356e9bf14a50963a94/display?to_ext=bigwig
+subGroups subtype=ABC drug=POM cell=TMD8 rep=R1 time=4h
+color 180,0,140
