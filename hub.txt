@@ -1,5 +1,6 @@
-hub LymphIKZF3
-shortLabel IKZF3 MEZ/POM (ABC vs GCB)
-longLabel IKZF3 2h and 24h perturbation BigWigs for ABC vs GCB across DMSO/MEZ/POM
+hub IKZF3_LymphRegulome
+shortLabel IKZF3 ChIP comp
+longLabel IKZF3 ChIP-seq bigWigs (Subtype/Drug/Time/Cell with Rep filters)
 genomesFile genomes.txt
 email salaheddine.ali@charite.de
+descriptionUrl hub.html
