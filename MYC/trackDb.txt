@@ -1,0 +1,180 @@
+# Default UCSC view around MYC
+browser hide all
+browser position chr8:127200000-128200000
+
+# Composite: by Cell line (X) and Replicate (Y)
+track MYC_ChIP_noTx
+compositeTrack on
+shortLabel MYC noTx
+longLabel MYC ChIP-seq (no treatment) across lymphoma cell lines
+type bigWig
+subGroup1 cell CellLine UPF33P=UPF33P UPF9T=UPF9T TMD8=TMD8 RAMOS=RAMOS RAJI=RAJI NAMALWA=NAMALWA LY1=LY1 HBL1=HBL1 DHL4=DHL4 BJAB=BJAB DG75=DG75 DAUDI=DAUDI CA46=CA46 BL41=BL41 BL2=BL2
+subGroup2 rep Rep REP1=REP1 REP2=REP2
+dimensions dimensionX=cell dimensionY=rep
+sortOrder cell=+ rep=+
+dragAndDrop subTracks
+visibility pack
+priority 1
+maxHeightPixels 100:32:8
+autoScale on
+viewLimits 0:10
+alwaysZero on
+
+# ---------- UPF33P ----------
+track UPF33P_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel UPF33P R1
+longLabel UPF33P MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721357561df4a869b753c/display?to_ext=bigwig
+color 0,120,200
+subGroups cell=UPF33P rep=REP1
+
+# ---------- UPF9T ----------
+track UPF9T_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel UPF9T R1
+longLabel UPF9T MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135251baa6f2e3a2fc5/display?to_ext=bigwig
+color 40,160,40
+subGroups cell=UPF9T rep=REP1
+
+# ---------- TMD8 ----------
+track TMD8_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel TMD8 R1
+longLabel TMD8 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135274e6ae9082e1d81/display?to_ext=bigwig
+color 200,120,0
+subGroups cell=TMD8 rep=REP1
+
+# ---------- RAMOS ----------
+track RAMOS_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel RAMOS R1
+longLabel RAMOS MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135edc8568292a9977d/display?to_ext=bigwig
+color 160,0,160
+subGroups cell=RAMOS rep=REP1
+
+# ---------- RAJI ----------
+track RAJI_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel RAJI R1
+longLabel RAJI MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ed3d11d739406e93/display?to_ext=bigwig
+color 0,160,160
+subGroups cell=RAJI rep=REP1
+
+# ---------- NAMALWA ----------
+track NAMALWA_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel NAMALWA R1
+longLabel NAMALWA MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721358907cfd95f381b3c/display?to_ext=bigwig
+color 200,80,80
+subGroups cell=NAMALWA rep=REP1
+
+# ---------- LY1 ----------
+track LY1_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel LY1 R1
+longLabel LY1 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135bafbc8346e65d494/display?to_ext=bigwig
+color 120,120,0
+subGroups cell=LY1 rep=REP1
+
+# ---------- HBL1 ----------
+track HBL1_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel HBL1 R1
+longLabel HBL1 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135f30f8253ec6c54f1/display?to_ext=bigwig
+color 0,100,200
+subGroups cell=HBL1 rep=REP1
+
+# ---------- DHL4 ----------
+track DHL4_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel DHL4 R1
+longLabel DHL4 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352071f0c48fc9b74c/display?to_ext=bigwig
+color 120,0,120
+subGroups cell=DHL4 rep=REP1
+
+# ---------- BJAB ----------
+track BJAB_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel BJAB R1
+longLabel BJAB MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ea40738a29814d36/display?to_ext=bigwig
+color 100,100,100
+subGroups cell=BJAB rep=REP1
+
+track BJAB_MYC_WT_0_REP2
+parent MYC_ChIP_noTx
+shortLabel BJAB R2
+longLabel BJAB MYC WT Rep2
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135949823539af983fe/display?to_ext=bigwig
+color 60,60,60
+subGroups cell=BJAB rep=REP2
+
+# ---------- DG75 ----------
+track DG75_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel DG75 R1
+longLabel DG75 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135122b3e4366d973c8/display?to_ext=bigwig
+color 0,120,80
+subGroups cell=DG75 rep=REP1
+
+# ---------- DAUDI ----------
+track DAUDI_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel DAUDI R1
+longLabel DAUDI MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135c5c0dc822b903798/display?to_ext=bigwig
+color 200,0,0
+subGroups cell=DAUDI rep=REP1
+
+# ---------- CA46 ----------
+track CA46_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel CA46 R1
+longLabel CA46 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135815f97d4fd65cb50/display?to_ext=bigwig
+color 0,0,200
+subGroups cell=CA46 rep=REP1
+
+# ---------- BL41 ----------
+track BL41_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel BL41 R1
+longLabel BL41 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721356b84ae224f2574e6/display?to_ext=bigwig
+color 0,0,0
+subGroups cell=BL41 rep=REP1
+
+# ---------- BL2 ----------
+track BL2_MYC_WT_0_REP1
+parent MYC_ChIP_noTx
+shortLabel BL2 R1
+longLabel BL2 MYC WT Rep1
+type bigWig
+bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721351687e7eac56cc728/display?to_ext=bigwig
+color 0,80,140
+subGroups cell=BL2 rep=REP1
