@@ -1,5 +1,5 @@
-hub MYC
-shortLabel MYC  (6 lines • DMSO/MEZ/POM • 4h)
-longLabel MYC ChIP-seq across 6 B-cell lymphoma lines
+hub MYC_ChIP_noTx
+shortLabel MYC ChIP (no Tx)
+longLabel MYC ChIP-seq (no treatment) across B-cell lymphoma lines (Galaxy-hosted bigWigs)
 genomesFile genomes.txt
 email salaheddine.ali@charite.de
