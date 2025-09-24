@@ -1,0 +1,5 @@
+hub MYC
+shortLabel MYC  (6 lines • DMSO/MEZ/POM • 4h)
+longLabel MYC ChIP-seq across 6 B-cell lymphoma lines
+genomesFile genomes.txt
+email salaheddine.ali@charite.de
